@@ -123,7 +123,7 @@ USE_L10N = True
 USE_TZ = True
 
 # JWT
-JWT_SECRET_KEY = 'fuck'
+JWT_SECRET_KEY = 'anything'
 
 
 # Static files (CSS, JavaScript, Images)
