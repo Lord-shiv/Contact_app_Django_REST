@@ -28,6 +28,13 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['contacto-shiv.herokuapp.com', '127.0.0.1']
 
+CORS_ALLOWED_ORIGINS = [
+    "https://example.com",
+    "https://sub.example.com",
+    "http://localhost:8080",
+    "http://127.0.0.1:9000"
+]
+
 
 # Application definition
 
@@ -41,7 +48,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'authentication',
     'contacts',
-    'drf_yasg'
+    'drf_yasg',
+    'corsheaders',
 ]
 
 SWAGGER_SETTINGS = {
@@ -63,6 +71,7 @@ REST_FRAMEWORK = {
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
