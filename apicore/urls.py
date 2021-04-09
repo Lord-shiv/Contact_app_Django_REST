@@ -28,7 +28,7 @@ schema_view = get_schema_view(
         default_version='v1',
         description="An api for contacts",
         terms_of_service="https://www.comming_soon/terms/",
-        contact=openapi.Contact(email="contact@contacs.remote"),
+        contact=openapi.Contact(email="shivamchouhan728@gmail.com"),
         license=openapi.License(name="Test License"),
     ),
     public=True,
